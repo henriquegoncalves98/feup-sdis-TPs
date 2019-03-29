@@ -39,7 +39,7 @@ public class Server extends Thread {
 
                 if((dString.substring(0,8)).equals("register"))
                 {
-                    String plateN = dString.substring(9,16);
+                    String plateN = dString.substring(9,17);
                     String owner = dString.substring(18);
                     //check if it already exists
                     dString = "-1";
@@ -52,7 +52,7 @@ public class Server extends Thread {
                 }
                 else if(dString.substring(0,6).equals("lookup"))
                 {
-                    String plateN = dString.substring(7,14);
+                    String plateN = dString.substring(7,15);
                     if((dString = db.get(plateN)) == null)
                         dString = "NOT_FOUND";
                 }
